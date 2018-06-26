@@ -1,0 +1,17 @@
+<%= form_for(post, html: {class: 'text-center'}) do |f| %> <!-- f는 @post에 담겨있던 컬럼하나하나에 맞춰서 사용가능 -->
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contents %>
+    <%= f.text_field :contents, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '등록하기', class: 'btn btn-info' %>
+    <%= link_to '뒤로가기', posts_path, class: 'btn btn-warning text-white' %>
+  </div>
+<% end %>

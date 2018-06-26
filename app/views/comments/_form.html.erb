@@ -1,0 +1,7 @@
+<%= form_tag("/post/#{post.id}/comments/create") do %>
+ <!--댓글 입력폼 -->
+ <%= text_field_tag(:content, nil, class: "form-control", placeholder: "댓글을 입력하세요") %>
+ <br>
+ <!--전송버튼 -->
+ <%= submit_tag("댓글 작성", class: "btn btn-primary") %>
+<% end %>

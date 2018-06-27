@@ -1,5 +1,5 @@
 <%= form_for(post, html: {class: 'text-center'}) do |f| %> <!-- f는 @post에 담겨있던 컬럼하나하나에 맞춰서 사용가능 -->
-
+  <%= f.hidden_field :daum_id, value: params[:cafe_id] %>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>

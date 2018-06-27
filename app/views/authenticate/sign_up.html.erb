@@ -1,0 +1,9 @@
+<h1>회 원 가 입</h1>
+<%= form_tag do %>
+    <%= text_field_tag :user_name %><br/>
+    <%= password_field_tag :password %><br/>
+    <%= password_field_tag :password_confirmation %><br/>
+    <%= submit_tag 'Sign Up' %>
+<% end %>
+<!-- 여기서 form_for(@user) do |f| 
+(@user가 빈껍데기,, 여기에 맞는 create 라우트불러옴?)사용을 못함.. 왜??? -->

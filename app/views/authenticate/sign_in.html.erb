@@ -1,0 +1,6 @@
+<h1>로 그 인</h1>
+<%= form_tag do %> <!--라우트파일에서 다 명시해놨기때문에 action안써도됨 -->
+    <%= text_field_tag :user_name %><br/>
+    <%= password_field_tag :password %><br/>
+    <%= submit_tag 'Sign In' %>
+<% end %>

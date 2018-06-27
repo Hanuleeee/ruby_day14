@@ -11,7 +11,19 @@
   - 좋아요 게시글
   - 사람, 카페
   - 카테고리, 해쉬태그
-  - 
+
+  
+
+`rails devise`
+
+> https://github.com/plataformatec/devise
+>
+> ```bash
+> $gem devise
+> $ rails generate devise:install
+> $ rails generate devise MODEL 
+> => 이거 세개만 치면 로그인 창 만들수 있음 But 나중에 자세히 보도록 하자
+> ```
 
 ### bcrypt
 

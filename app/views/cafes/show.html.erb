@@ -1,9 +1,12 @@
 <!-- 카페 정보 ㄴㄴ -->
 <!-- 카페에 등록된 글 ㅇㅇ-->
 <h1><%=@cafe.title %></h1>
+<p><%= @cafe.description %></p>
 
+<% #unless @cafe.is_member?(current_user) %>
 <!-- 카페가입버튼 -->
 <%= link_to '가입하기', join_cafe_path(@cafe), method: 'POST', class:'btn btn-warning text-white'%>
+<% #end %>
 
 <ul class="list-group">
   <% @cafe.posts.each do |post| %> <!-- 카페에 속해있는 포스트들-->

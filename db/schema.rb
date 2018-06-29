@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180626062434) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
+    t.string   "image_path"
     t.text     "contents"
     t.integer  "user_id"
     t.integer  "daum_id"

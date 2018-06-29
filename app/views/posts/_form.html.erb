@@ -9,6 +9,11 @@
     <%= f.label :contents %>
     <%= f.text_field :contents, class: 'form-control' %>
   </div>
+  
+  <div class="field">
+    <%= f.label :image_path %>
+    <%= f.file_field :image_path, class: 'form-control' %>
+  </div>
 
   <div class="actions">
     <%= f.submit '등록하기', class: 'btn btn-info' %>

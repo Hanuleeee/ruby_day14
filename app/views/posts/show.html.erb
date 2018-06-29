@@ -9,8 +9,23 @@
   <%= @post.contents %>
 </p>
 
+<p>
+  <strong>ImagePath:</strong>
+  <img src="<%= @post.image_path %>" width="100%" />
+</p>
+
+<p>
+  <strong>Thumb Fill:</strong>
+  <img src="<%= @post.image_path.thumb_fi11.url %>" />
+</p>
+
+<p>
+  <strong>Thumb Fit:</strong>
+  <img src="<%= @post.image_path.thumb_fit.url %>"/>
+</p>
+
 <%= link_to '수정', edit_post_path(@post), class: 'btn btn-warning text-white' %> |
-<%= link_to '목록', posts_path, class: 'btn btn-info'  %> |
+<%= link_to '목록', cafe_path(@post.daum_id), class: 'btn btn-info'  %> | <!-- (@post.daum) daum객체가 나옴...??-->
 <%= link_to '삭제', post_path, class: 'btn btn-danger', method: 'DELETE', data: {confirm: "삭제하시겠습니까?"} %>
 <hr>
 <!-- 댓글 입력-->

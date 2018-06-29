@@ -27,9 +27,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
    #  @post.daum_id = session[:current_cafe]
-    #일단 이거 무시하고 아래꺼 보기
     if @post.save
       # flash[:success] = "Post was successfully created."
+      session.delete(:current_cafe)
       redirect_to @post, flash: {success: 'Post was successfully created.'}  # redirect_to:어디로 갈지를 지정, flash의 key: value
     else
       render :new
@@ -61,7 +61,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :contents, :daum_id) # 우리가 설정해놓은 파라미터만 받을 수 있음
+      params.require(:post).permit(:title, :contents, :image_path, :daum_id) # 우리가 설정해놓은 파라미터만 받을 수 있음
       # {title: params[:post][:title], contents: params[:post][:contents], cafe_id: [:post][:daum_id]}
     end
 end
